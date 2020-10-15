@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap");
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+body {
+	font: 1.6rem Helvetica;
+	height: 100vh;
+	margin: 0;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";
+	grid-template-columns: 1fr;
+	grid-template-rows: 5rem 1fr 5rem;
+	height: 100%;
+}
+
+.header {
+	grid-area: header;
+	background-color: #1565C0;
+	color: #ffffff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5rem;
+	font-family: "Roboto Slab", serif;
+}
+
+.brand a {
+	color: #ffffff;
+	font-size: 2.5rem;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.header-links a{
+	color: #ffffff;
+	padding: 5px;
+	margin: 5px;
+}
+
+.header-links a:hover {	
+	color: #e2ac55;
+	grid-area: header;
+}
+.main {
+	grid-area: main;
+	min-height: 100vh;
+	padding-bottom: 2.5rem;
+	position: relative;
+}
+
+.footer {
+	grid-area: footer;
+	background-color: #1565C0;
+	color: #ffffff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	bottom: 0;
+	height: 70px;
+	width: 100%;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	columns: #ff8000;
+}
+.products {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.products li {
+	list-style-type: none;
+	padding: 0;
+	flex: 0 1 34rem;
+	margin: 1rem;
+	height: 40rem;
+	/* border-bottom: 0.3rem gray solid; */
+}
+
+.product {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 60%;
+	/* padding: 16px; */
+	border: 1px solid rgb(207, 207, 207);
+	border-radius: 10px;
+}
+
+.product:hover {
+	-webkit-box-shadow: 0px 0px 40px -5px rgba(128, 128, 128, 0.4);
+	-moz-box-shadow: 0px 0px 40px -5px rgba(128, 128, 128, 0.4);
+	box-shadow: 0px 0px 40px -5px rgba(128, 128, 128, 0.4);
+	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 0.4);
+	border: none;
+}
+
+.product-name {
+	border-top: 1px solid rgb(207, 207, 207);
+	font-size: 2rem;
+	padding-top: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	font-weight: bold;
+}
+.product-brand {
+	font-size: 1.8rem;
+	padding-left: 16px;
+	padding-right: 16px;
+	color: #808080;
+}
+.product-price {
+	font-size: 1.8rem;
+	padding-left: 16px;
+	padding-right: 16px;
+	font-weight: bold;
+}
+.product-image {
+	max-width: 14rem;
+	max-height: 14rem;
+	/* padding-left: 16px; */
+	padding-left: 25%;
+}
+
+.product-image:hover {
+	transform: scale(2);
+	/* border: 1px solid rgb(207, 207, 207); */
+	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* SIDEBAR */
+.brand button {
+	font-size: 3rem;
+	padding: 0.5rem;
+	background: none;
+	border: none;
+	color: white;
+}
+
+.sidebar {
+	position: fixed;
+	transition: all 0.8s;
+	transform: translateX(-30rem);
+	width: 30rem;
+	background-color: #eeeeee;
+	height: 100%;
+  z-index: 1;
+  font-family: "Roboto Slab", serif;
+  
+	
+}
+.sidebar ul li{
+  list-style-type: none;
+}
+
+.sidebar.open {
+	transform: translateX(0);
+}
+
+.sidebar-close-button {
+	border-radius: 50%;
+	border: 0.1rem #000000 solid;
+	width: 3rem;
+	height: 3rem;
+	padding: 0.5rem;
+	font: 2rem;
+	padding: 0.5rem;
+	font-size: 2rem;
+	padding-top: 0;
+	cursor: pointer;
+	position: absolute;
+	right: 0.5rem;
+	top: 1.5rem;
+}
+
+.details {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 1rem;
+}
+.details-image img {
+	max-width: 60rem;
+	widows: 100;
+	margin: 20px;
+}
+.details-image {
+	flex: 2 1 20rem;
+}
+
+.details-info {
+	flex: 1 1 30rem;
+}
+
+.details-action {
+	flex: 1 1 20rem;
+}
+
+.details-info ul,
+.details-action ul {
+	list-style-type: none;
+	padding: 0;
+}
+.details-info li,
+.details-action li {
+	margin-bottom: 1rem;
+}
+
+.BTH {
+	padding: 1rem;
+}
+
+.details-action {
+	/* border: 0.1rem #808080 solid; */
+	border-radius: 0.5rem;
+	background-color: #f0f0f0;
+	padding: 1rem;
+}
+
+.details-action ul li:last-child {
+	display: flex;
+	flex-direction: column;
+}
+
+.button {
+	padding: 10px;
+	border: 0.1rem #808434 solid;
+	border-radius: 0.5rem;
+	cursor: pointer;
+}
+
+.button:hover {
+	/* border: 0.1rem #404040 solid; */
+	margin: 4px;
+	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+	background-color: #c2954d;
+}
+.button {
+	background-color: #e2ac55;
+	border: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #fff;
+}
