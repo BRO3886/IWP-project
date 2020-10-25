@@ -4,6 +4,7 @@ import "./App.css";
 import HomeScreen from "./Screens/HomeScreen";
 import ProductScreen from "./Screens/ProductScreen";
 import LandingPage from "./Screens/LandingPage";
+import CartScreen from './Screens/CartScreen'
 
 function App() {
 	const openMenu = () => {
